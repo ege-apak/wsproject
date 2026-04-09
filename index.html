@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anasayfa</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">                                               
+<body>
+    <header id="baslik">    
+        <a href="index.html"><img class="logo" src="img/logo.jpg" alt="logo"></a> 
+        <div class="linkcontainer">
+        <a href="#" class="abone abone-ol" >Abone Ol</a>
+        <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer" class="help help-ol">Kendi Siteni Oluştur</a>
+        </div>
+    </header>
+    <nav class="menu">
+        <hr>
+        <ul>
+            <li><a href="eticaret.html">E-ticaret</a></li> 
+            <li><a href="dijitalpazarlama.html">Dijital Pazarlama</a></li> 
+            <li><a href="webtasarimi.html">Web Tasarımı</a></li> 
+            <li><a href="tavsiyeler.html">İşletmelere Tavsiyeler</a></li> 
+            <li><a href="sanatvefotograf.html">Sanat ve Fotoğrafçılık</a></li> 
+            <li><a href="bizkimiz.html">Biz Kimiz?</a></li> 
+            <li>
+                <label for="arainput">
+                <img src="img/searchicon.png" alt="" class="searchicon" style="cursor: pointer;">
+                 </label>
+                <input type="search" id="arainput" name="search" class="ara" placeholder="Keşfet...">
+            </li>
+        </ul>
+     <hr>
+    </nav>
+
+    <main class="container">
+    <article class="anasayfa">
+        
+        <p class="tarih">4 Nisan 2026.</p>
+          <h1>Hoşgeldiniz
+          </h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in iaculis metus, sit amet eleifend quam. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+         <br>
+        <h3>Başlamak için: <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer" class="weblink">Web sitesi kurun</a>➔ | 
+                           <a href="https://www.cloudflare.com/" target="_blank" rel="noopener noreferrer" class="domainlink">Alan adı satın alın</a>➔</h3>
+        <br>
+        <img src="img/main.png" alt="" class="mainpng">
+    </article>
+    <aside class="yanmenu">
+        <img class="yanmenupng" src="img/aside.png" alt="reklampng">
+    </aside>
+    </main>
+    
+    <footer>
+
+    </footer>
+    <script>
+const searchInput = document.querySelector('.ara');
+searchInput.addEventListener('focus', () => {
+    searchInput.style.width = '200px';
+    searchInput.style.transition = '0.4s';
+    searchInput.style.borderBottom = '1px solid black';
+});
+
+searchInput.addEventListener('blur', () => {
+    searchInput.style.width = '140px';
+    searchInput.style.borderBottom = 'none';
+});
+    </script>
+</body>
+</html>

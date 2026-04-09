@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Tasarımı</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">                                               
+<body>
+    <header id="baslik">    
+        <a href="index.html"><img class="logo" src="img/logo.jpg" alt="logo"></a> 
+        <div class="linkcontainer">
+        <a href="#" class="abone abone-ol" >Abone Ol</a>
+        <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer" class="help help-ol">Kendi Siteni Oluştur</a>
+        </div>
+    </header>
+    <nav class="menu">
+        <hr>
+        <ul>
+            <li><a href="eticaret.html">E-ticaret</a></li> 
+            <li><a href="dijitalpazarlama.html">Dijital Pazarlama</a></li> 
+            <li><a href="webtasarimi.html">Web Tasarımı</a></li> 
+            <li><a href="tavsiyeler.html">İşletmelere Tavsiyeler</a></li> 
+            <li><a href="sanatvefotograf.html">Sanat ve Fotoğrafçılık</a></li> 
+            <li><a href="bizkimiz.html">Biz Kimiz?</a></li> 
+            <li>
+               <label for="arainput">
+                <img src="img/searchicon.png" alt="" class="searchicon" style="cursor: pointer;">
+                 </label>
+                <input type="search" id="arainput" name="search" class="ara" placeholder="Keşfet...">
+            </li>
+        </ul>
+       <hr>
+    </nav>
+    <main class="container">
+    <article class="anasayfa">
+    <br>
+    <br>
+    <h1>Web Tasarım</h1>
+    <p>
+     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+    </p>
+    <hr>
+    <br>
+    <h3>Kullanıcı Odaklı Tasarım</h3>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </p>
+
+    <h3>Mobil Uyumluluk (Responsive)</h3>
+    <p>
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+    </p>
+    </article>
+    <aside class="yanmenuweb">
+        <img src="img/webdesign.png" class="webdesignpng">
+    </aside>
+    
+    </main>
+    <footer class="altmenu">
+                            
+    </footer>
+    <script>
+const searchInput = document.querySelector('.ara');
+searchInput.addEventListener('focus', () => {
+    searchInput.style.width = '200px';
+    searchInput.style.transition = '0.4s';
+    searchInput.style.borderBottom = '1px solid black';
+});
+
+searchInput.addEventListener('blur', () => {
+    searchInput.style.width = '140px';
+    searchInput.style.borderBottom = 'none';
+});
+    </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Ticaret</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">                                               
+<body>
+    <header id="baslik">    
+        <a href="index.html"><img class="logo" src="img/logo.jpg" alt="logo"></a> 
+        <div class="linkcontainer">
+        <a href="#" class="abone abone-ol" >Abone Ol</a>
+        <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer" class="help help-ol">Kendi Siteni Oluştur</a>
+        </div>
+    </header>
+    <nav class="menu">
+        <hr>
+        <ul>
+            <li><a href="eticaret.html">E-ticaret</a></li> 
+            <li><a href="dijitalpazarlama.html">Dijital Pazarlama</a></li> 
+            <li><a href="webtasarimi.html">Web Tasarımı</a></li> 
+            <li><a href="tavsiyeler.html">İşletmelere Tavsiyeler</a></li> 
+            <li><a href="sanatvefotograf.html">Sanat ve Fotoğrafçılık</a></li> 
+            <li><a href="bizkimiz.html">Biz Kimiz?</a></li> 
+            <li>
+               <label for="arainput">
+                <img src="img/searchicon.png" alt="" class="searchicon" style="cursor: pointer;">
+                 </label>
+                <input type="search" id="arainput" name="search" class="ara" placeholder="Keşfet...">
+            </li>
+        </ul>
+       <hr>
+    </nav>
+    <main class="container">
+    <article class="anasayfa">
+       <h1>E-Ticaret</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et ex eu mi blandit tincidunt. Vivamus vel feugiat massa, vel pretium turpis. Pellentesque varius, sem ut maximus interdum, justo velit hendrerit tellus, ac finibus leo felis sit amet eros.</p>
+
+    <h2>Planlama ve Altyapı Seçimi</h2>
+    <p>Donec eget finibus nisl. Integer molestie lorem at massa tincidunt, ut gravida augue sodales. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur nec ex vel neque sollicitudin vulputate.</p>
+
+    <h3>Teknik Gereksinimler</h3>
+    <p>Mauris pellentesque purus sed nisl condimentum, in ullamcorper tellus efficitur. Sed congue, arcu sit amet accumsan varius, lectus tortor scelerisque enim, a hendrerit mi augue eu ex.</p>
+
+    <h2>Kullanıcı Memnuniyeti ve Satış Sonrası Destek</h2>
+    <p>Quisque non lorem nec neque scelerisque feugiat. Aenean lacinia, dui sed elementum pellentesque, eros nisl sodales arcu, a accumsan ex nisl a risus. In hac habitasse platea dictumst.</p>
+
+    <ul>
+        <li><strong>Analiz:</strong> Lorem ipsum dolor sit amet.</li>
+        <li><strong>Uygulama:</strong> Consectetur adipiscing elit.</li>
+        <li><strong>Destek:</strong> Sed do eiusmod tempor.</li>
+    </ul>
+    <h2>Gelecek Trendleri: Yapay Zeka ve E-Ticaret</h2>
+    <p>Phasellus eget enim eu lectus saggitis feugiat. Nulla facilisi. Curabitur vitae sem sed enim saggitis elementum vel a nisi. Proin elementum, dolor a saggitis pretium, nisi nisi elementum lorem, nec facilisis magna ex a ex.</p>
+    </article>
+    <aside class="yanmenuticaret">
+        <img src="img/eticaret.png" class="eticaretpng">
+        <img src="img/eticaret2.png" class="eticaretpng" alt="">
+    </aside>
+    </main>
+    <footer>
+
+    </footer>
+    <script>
+
+const searchInput = document.querySelector('.ara');
+searchInput.addEventListener('focus', () => {
+    searchInput.style.width = '200px';
+    searchInput.style.transition = '0.4s';
+    searchInput.style.borderBottom = '1px solid black';
+});
+
+searchInput.addEventListener('blur', () => {
+    searchInput.style.width = '140px';
+    searchInput.style.borderBottom = 'none';
+});
+    </script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biz Kimiz?</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">                                               
+<body>
+    <header id="baslik">    
+        <a href="index.html"><img class="logo" src="img/logo.jpg" alt="logo"></a> 
+        <div class="linkcontainer">
+        <a href="#" class="abone abone-ol" >Abone Ol</a>
+        <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer" class="help help-ol">Kendi Siteni Oluştur</a> 
+        </div>
+    </header>
+    <nav class="menu">
+        <hr>
+        <ul>
+            <li><a href="eticaret.html">E-ticaret</a></li> 
+            <li><a href="dijitalpazarlama.html">Dijital Pazarlama</a></li> 
+            <li><a href="webtasarimi.html">Web Tasarımı</a></li> 
+            <li><a href="tavsiyeler.html">İşletmelere Tavsiyeler</a></li> 
+            <li><a href="sanatvefotograf.html">Sanat ve Fotoğrafçılık</a></li> 
+            <li><a href="bizkimiz.html">Biz Kimiz?</a></li> 
+            <li>
+                <label for="arainput">
+                <img src="img/searchicon.png" alt="" class="searchicon" style="cursor: pointer;">
+                 </label>
+                <input type="search" id="arainput" name="search" class="ara" placeholder="Keşfet...">
+            </li>
+        </ul>
+       <hr>
+    </nav>
+    <main class="container">
+    <article class="anasayfa">
+       <div class="biznecontainer">
+    <h2 class="biznetitle">Biz Ne Yapıyoruz?</h2>
+    
+    <div class="icerik">
+        <div class="item">
+            <div class="icon-kutu">🛡️</div>
+            <div class="text-kutu">
+                <h3>Güvenlik Odaklı Bakış</h3>
+                <p>Teknolojiyi sadece kullanmayı değil, onu nasıl koruyacağımızı da önemsiyoruz. Siber güvenlik ve ağ teknolojileri perspektifiyle içerikler üretiyoruz.</p>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="icon-kutu">💻</div>
+            <div class="text-kutu">
+                <h3>Modern Geliştirme</h3>
+                <p>Web dünyasındaki güncel standartları (HTML, CSS, JavaScript) ve yeni nesil tasarım anlayışını rehberlerimize dahil ediyoruz.</p>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="icon-kutu">📊</div>
+            <div class="text-kutu">
+                <h3>Veri ve Strateji</h3>
+                <p>İşletmeler için dijitalleşme süreçlerini, verimlilik araçlarını ve stratejik hamleleri analiz ediyoruz.</p>
+                <div class="iletisim">
+                    <br>
+                    <br>
+                <p>📞İletişim İçin</p>
+                <p>✉️Email: info@example.com</p>
+                <p>📍İstanbul</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>                                                                                                                      
+
+    </article>
+    <aside class="yanmenubiz">
+        <img src="img/danismanlik.jpg" class="rehberpng" alt="">
+    </aside>
+
+    </main>
+    <footer>
+
+    </footer>
+    <script>
+const searchInput = document.querySelector('.ara');
+searchInput.addEventListener('focus', () => {
+    searchInput.style.width = '200px';
+    searchInput.style.transition = '0.4s';
+    searchInput.style.borderBottom = '1px solid black';
+});
+
+searchInput.addEventListener('blur', () => {
+    searchInput.style.width = '140px';
+    searchInput.style.borderBottom = 'none';
+});
+    </script>
+</body>
+</html>
