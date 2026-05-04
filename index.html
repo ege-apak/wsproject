@@ -10,8 +10,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">                                               
 <body>
     <header id="baslik">    
-        <a href="index.html"><img class="logo" src="img/logo.jpg" alt="logo"></a> 
+          <a href="index.html" class="logo-link"><h1>Blog Test</h1></a>
         <div class="linkcontainer">
+        <button id="dark-mode-btn" class="darkmodebt" onclick="darkMode()">🌙</button>
         <a href="#" class="abone abone-ol" >Abone Ol</a>
         <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer" class="help help-ol">Kendi Siteni Oluştur</a>
         </div>
@@ -19,25 +20,26 @@
     <nav class="menu">
         <hr>
         <ul>
+            <li><a href="index.html">Sosyal</a></li> 
             <li><a href="eticaret.html">E-ticaret</a></li> 
             <li><a href="dijitalpazarlama.html">Dijital Pazarlama</a></li> 
             <li><a href="webtasarimi.html">Web Tasarımı</a></li> 
             <li><a href="tavsiyeler.html">İşletmelere Tavsiyeler</a></li> 
             <li><a href="sanatvefotograf.html">Sanat ve Fotoğrafçılık</a></li> 
             <li><a href="bizkimiz.html">Biz Kimiz?</a></li> 
+            <li><a href="contact.html">İletişim</a></li>
             <li>
                 <label for="arainput">
-                <img src="img/searchicon.png" alt="" class="searchicon" style="cursor: pointer;">
+                <span style="cursor: pointer; font-size: 1.1rem; margin-right: 8px;">🔍</span>
                  </label>
                 <input type="search" id="arainput" name="search" class="ara" placeholder="Keşfet...">
             </li>
         </ul>
      <hr>
     </nav>
-
-    <main class="container">
-    <article class="anasayfa">
-        
+    <main class="mainContainer">
+    <article class="menu">
+        <div class="kutu">
         <p class="tarih">4 Nisan 2026.</p>
           <h1>Hoşgeldiniz
           </h1>
@@ -46,28 +48,92 @@
         <h3>Başlamak için: <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer" class="weblink">Web sitesi kurun</a>➔ | 
                            <a href="https://www.cloudflare.com/" target="_blank" rel="noopener noreferrer" class="domainlink">Alan adı satın alın</a>➔</h3>
         <br>
-        <img src="img/main.png" alt="" class="mainpng">
+        <img src=".img/main.png" class="mainpng">
+        </div>
+        <br>
+
+       <div class="kutu">
+    <p class="tarih">6 Nisan 2026</p>
+    <h1>Modern CSS Teknikleri</h1>
+    <p>
+        <strong>@someone:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam volutpat sem eget enim condimentum tristique. Ut luctus aliquam erat, eget tempus tortor vehicula varius. Donec pretium mauris eget tellus vulputate, vitae fringilla risus lobortis. Aenean condimentum ultrices magna. Donec vel faucibus velit. In hac habitasse platea dictumst. Quisque semper, augue.
+    </p>
+    <br>
+    <h3>İlgili Linkler: <a href="#" class="weblink">CSS Teknikleri</a>➔</h3>
+    <br>
+     <div class="">
+        <span>💬 87 Yorum</span> | <span>🔥 851 Görüntülenme</span> | <span>⬆️ 283 Beğeni</span>
+    </div>
+    <img src="https://images.unsplash.com/photo-1523437113738-bbd3cc89fb19" class="mainpng" alt="CSS Tasarımı">
+</div>
+
+        <br>
+        <div class="kutu">
+    <p class="tarih">5 Nisan 2026</p>
+    <h1>Performans Analizi: CPU ve GPU İzleme Teknikleri</h1>
+    <p>
+        <strong>@someone:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante velit, fermentum sed eros ac, dictum fermentum erat. Cras vel arcu ornare ante euismod bibendum eget at turpis. Suspendisse tortor leo, mattis et nulla iaculis, ullamcorper aliquam arcu. Sed sit amet cursus sem. Morbi nisl lacus, suscipit eget hendrerit ac.
+    </p>
+    <h3>İlgili Linkler: <a href="#" class="weblink">Analiz Teknikleri</a>➔</h3>
+    <br>
+    <div class="">
+        <span>💬 24 Yorum</span> | <span>🔥 156 Görüntülenme</span> | <span>⬆️ 42 Beğeni</span>
+    </div>
+    <br>
+    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b" class="mainpng">
+</div>
     </article>
-    <aside class="yanmenu">
-        <img class="yanmenupng" src="img/aside.png" alt="reklampng">
+    <aside>
+        
     </aside>
     </main>
     
     <footer>
-
+<button id="up">Başa Dön</button>
     </footer>
     <script>
+// keşfet 
 const searchInput = document.querySelector('.ara');
 searchInput.addEventListener('focus', () => {
     searchInput.style.width = '200px';
     searchInput.style.transition = '0.4s';
-    searchInput.style.borderBottom = '1px solid black';
+    searchInput.style.borderBottom = '1px solid';
 });
 
 searchInput.addEventListener('blur', () => {
     searchInput.style.width = '140px';
     searchInput.style.borderBottom = 'none';
 });
+
+// başa dön buttonu
+const btn = document.getElementById("up");
+
+window.onscroll = () => {
+  const isBottom = (window.innerHeight + window.scrollY)    
+   >= document.body.offsetHeight - 10;
+  btn.style.display = isBottom ? "block" : "none";
+};
+
+btn.onclick = () => window.scrollTo(0, 0);
+
+//darkmode
+const currentMode = localStorage.getItem("dark");
+const btnIcon = document.getElementById("dark-mode-btn");
+
+if (currentMode === "1") {
+    document.body.classList.add("dark-mode");
+    if(btnIcon) btnIcon.textContent = "☀️"; 
+}
+
+function darkMode() {
+    const isDark = document.body.classList.toggle("dark-mode");
+    localStorage.setItem("dark", isDark ? "1" : "0");
+    
+   
+    if(btnIcon) {
+        btnIcon.textContent = isDark ? "☀️" : "🌙";
+    }
+}
     </script>
 </body>
 </html>
