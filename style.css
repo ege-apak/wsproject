@@ -553,6 +553,10 @@ html {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
 }
+ .kutu:hover {
+        transform: translateY(-10px);
+        box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.15);
+    }
 
 .sform input, .sform textarea {
     width: 100%;
