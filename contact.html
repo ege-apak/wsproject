@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>İşletmelere Tavsiyeler</title>
+    <title>Biz Kimiz?</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,9 +12,9 @@
     <header id="baslik">    
           <a href="index.html" class="logo-link"><h1>Blog Test</h1></a>
         <div class="linkcontainer">
-        <button id="dark-mode-btn" class="darkmodebt" onclick="darkMode()">🌙</button>   
+        <button id="dark-mode-btn" class="darkmodebt" onclick="darkMode()">🌙</button>
         <a href="#" class="abone abone-ol" >Abone Ol</a>
-        <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer" class="help help-ol">Kendi Siteni Oluştur</a>
+        <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer" class="help help-ol">Kendi Siteni Oluştur</a> 
         </div>
     </header>
     <nav class="menu">
@@ -38,61 +38,24 @@
        <hr>
     </nav>
     <main class="container">
-    <article class="anasayfa">
-    
-     <h1>İşletmelere Tavsiyeler</h1>
-<p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at porttitor sem. 
-    Aliquam erat volutpat. Donec neque orci, tincidunt id varius et, pretium eget nisi.
-</p>
-
-<hr> <h2>Stratejik Planlama ve Vizyon</h2>
-<p>
-    Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. 
-    Sed ut imperdiet nisi. Proin condimentum fermentum nunc.
-</p>
-
-<h3>Dijital Dönüşümün Önemi</h3>
-<p>
-    Etiam ultrices ante id risus elementum, ac laoreet leo sim. 
-    Mauris aliquet lorem quis tellus placerat, sit amet fringilla nisi saggitis.
-</p>
-
-<h2>Müşteri İlişkileri Yönetimi</h2>
-<p>
-    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
-    In hac habitasse platea dictumst.
-</p>
-
-<ul>
-    <li><strong>Odak Noktası:</strong> Lorem ipsum dolor sit amet.</li>
-    <li><strong>Süreklilik:</strong> Consectetur adipiscing elit.</li>
-    <li><strong>Geri Bildirim:</strong> Sed do eiusmod tempor incididunt.</li>
-</ul>
-
-<h2>Finansal Sürdürülebilirlik</h2>
-<p>
-    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-    Excepteur sint occaecat cupidatat non proident.
-</p>
-
-<h3>Maliyet Analizi</h3>
-<p>
-    Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. 
-    Nullam varius, turpis et commodo pharetra, est eros bibendum elit.
-</p>
-
+    <article class="contactmain">
+    <div class="box">
+            <span class="emoji">✉️</span>
+            <h3>Bize Ulaşın</h3>
+            <form action="#" class="sform">
+                <input type="text" placeholder="Adınız/Soyadınız" required>
+                <input type="email" placeholder="E-Posta Adresiniz" required>
+                <textarea placeholder="Mesajınız" rows="20" required></textarea>
+                <button type="submit" style="font-family: Montserrat";>Gönder</button> 
+            </form>
+        </div>                                                                                                                      
     </article>
-    <aside class="yanmenutavsiye">
-        <img src="st1.png" class="st1" >
-        <img src="st2.png" class="st2">
-    </aside>
     </main>
     <footer>
 <button id="up">Başa Dön</button>
     </footer>
     <script>
-// keşfet 
+// keşfet
 const searchInput = document.querySelector('.ara');
 searchInput.addEventListener('focus', () => {
     searchInput.style.width = '200px';
@@ -100,10 +63,14 @@ searchInput.addEventListener('focus', () => {
     searchInput.style.borderBottom = '1px solid';
 });
 
+
 searchInput.addEventListener('blur', () => {
     searchInput.style.width = '140px';
     searchInput.style.borderBottom = 'none';
+    
 });
+
+
 // başa dön buttonu
 const btn = document.getElementById("up");
 
@@ -112,7 +79,6 @@ window.onscroll = () => {
    >= document.body.offsetHeight - 10;
   btn.style.display = isBottom ? "block" : "none";
 };
-
 btn.onclick = () => window.scrollTo(0, 0);
 
 //darkmode
@@ -133,7 +99,6 @@ function darkMode() {
         btnIcon.textContent = isDark ? "☀️" : "🌙";
     }
 }
-
     </script>
 </body>
 </html>
