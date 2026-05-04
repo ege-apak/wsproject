@@ -1,6 +1,11 @@
+/* HEADER */
+.logo-link {
+    text-decoration: none;
+    color: black;
+}
 
-
-#baslik{
+#baslik {
+    font-family: "Montserrat";
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -9,77 +14,168 @@
     margin: 0 auto; 
     flex-wrap: wrap;
 }
+/* KOYU MODE */
 
-.linkcontainer{
+body.dark-mode {        
+    background-color: #1a1a1a;
+    color: #f1f1f1;
+}
+
+.dark-mode .logo-link {
+    color: white;
+}
+
+.dark-mode #baslik a, 
+.dark-mode nav ul a, 
+.dark-mode .tarih {
+    color: #f1f1f1;
+}
+
+
+.dark-mode nav hr {
+    border-color: #333;
+}
+
+
+.dark-mode .ara {
+    color: white;
+}
+.dark-mode .ara::placeholder {
+    color: #666;
+}
+
+
+.dark-mode .abone-ol {
+    color: #f1f1f1;
+    border-color: #f1f1f1;
+    background-color: transparent; 
+}
+
+
+.dark-mode .help-ol {
+    background-color: #f1f1f1 !important; 
+    color: #1a1a1a !important;            
+    border-color: #f1f1f1;
+}
+
+
+
+.dark-mode #up {
+    background-color: #f1f1f1;
+    color: #111;
+}
+
+
+.darkmodebt {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 5px;
+    margin-left: 10px;
+}
+
+.dark-mode .biznetitle {
+    color: #f1f1f1;
+}
+
+.dark-mode .text-kutu h3 {
+    color: #ffffff; 
+}
+
+.dark-mode .text-kutu p {
+    color: #d3d3d3; 
+}
+
+.dark-mode .iletisim p {
+    color: #f1f1f1;
+}
+
+.dark-mode .ara:focus {
+    border-bottom: 1px solid white;
+}
+
+.dark-mode .side {
+    background-color: #222; 
+    color: white;
+}
+.dark-mode nav ul li a::after {
+    background-color: #f1f1f1;
+}
+.linkcontainer {
     display: flex;
     gap: 20px;
     padding: 20px;  
 }
-.abone{
-  text-decoration: none;
-  padding: 10px 25px;  
-  font-family: "Montserrat";
-  font-size: 16px;
-  font-weight: 300;
-  border-radius: 50px;   
-  display: flex;
-  align-items: center;
-  transition: 0.3s; 
+
+/* ABONE BUTONU */
+.abone {
+    text-decoration: none;
+    padding: 10px 25px;  
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-weight: 300;
+    border-radius: 50px;   
+    display: flex;
+    align-items: center;
+    transition: 0.3s; 
 }
 
-.abone-ol{
-    color:black;
+.abone-ol {
+    color: black;
     border: 1px solid;
     text-decoration: none;
 }
 
-.help{
-  text-decoration: none;
-  padding: 10px 25px;  
-  font-family: "montserrat";
-  font-size: 16px;
-  font-weight: 300;
-  border-radius: 50px;   
-  display: flex;
-  align-items: center;
-  transition: 0.3s;      
-    
+/* HELP BUTONU */
+.help {
+    text-decoration: none;
+    padding: 10px 25px;  
+    font-family: "montserrat";
+    font-size: 16px;
+    font-weight: 300;
+    border-radius: 50px;   
+    display: flex;
+    align-items: center;
+    transition: 0.3s;      
 }
-.help-ol{
-   color: white;
-  border: 1px solid white; 
-  background-color: black;
+
+.help-ol {
+    color: white;
+    border: 1px solid white; 
+    background-color: black;
 }
-.logo{
+
+/* LOGO */
+.logo {
     display: flex;
     width: 210px;
     justify-content: flex-start;
-
 }
-.mainpng{
+
+.mainpng {
     display: block;
     width: 100%;
     height: auto; 
     max-width: 600px;
-    margin-top: 38px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 7px;
 }
 
+/*  NAV  */
 
-
-
-
-nav ul{
-    
+nav ul {
     font-family: "Montserrat";
-    display: flex;                                                      
-    list-style: none;                                                       
+    display: flex;                                                                         
+    list-style: none;                                                                      
     text-align: center;
     justify-content: center;
     padding: 15px;             
     margin: 0 auto;
     gap: 40px;
     flex-wrap: wrap;
-
 }
 
 nav ul li {
@@ -87,25 +183,53 @@ nav ul li {
     align-items: center;
 }
 
-nav ul a{
+nav ul a {
     display: flex;
     text-decoration: none;
     color: black;
 }   
-nav hr{
+
+nav hr {
     width: 90%;            
 }
 
-.ara{
+nav ul li a {
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: lightcoral; 
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+
+
+/* ARAMA KUTUSU  */
+.ara {
     border: none;             
     outline: none;           
     font-family: "Montserrat";
     font-size: 16px;
     padding: 4px 0;
     background: transparent;  
-    width: 140px;             
+    width: 140px;       
+    border-bottom: 1px solid transparent; 
+    transition: width 0.4s, border-bottom 0.4s;      
 }
-.searchicon{
+
+.searchicon {
     width: 17px; 
     height: 17px;
     margin-right: 8px; 
@@ -116,12 +240,34 @@ nav hr{
     font-style: italic;
 }   
 
+
+.ara:focus {
+    border-bottom: 1px solid black;
+}
+
+
+
+
+/* CONTAİNER */
+ .mainContainer{
+    font-family: "Montserrat";
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;    
+    text-align: center;
+    max-width: 1200px;  
+    margin: 0 auto;    
+    gap: 50px;         
+    padding: 30px;
+    
+    }
+
 .container {
     font-family: "Montserrat";
     flex-wrap: wrap;
     display: flex;
     justify-content: center;    
-     text-align: center;
+    text-align: center;
     max-width: 1000px;  
     margin: 0 auto;    
     gap: 50px;         
@@ -129,42 +275,50 @@ nav hr{
 }
 
 .anasayfa {
-    flex: 2;
+    flex: 3;
     text-align: left;   
     text-decoration: none;        
 }
+  .side{
+        display: flex;
+        flex-direction: column;
+        flex: 0.5;
+        min-width: 100px;      
+        padding: 30px 50px;
+        border-radius: 20px;
+        box-shadow: 0px 20px 40px 20px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;  
+        border: 1px solid rgba(0,0,0,0.02);
+        align-items: flex-start; 
+    }
+.menu{
+        display: flex;
+        flex: 3;
+        justify-content: left;
+        flex-wrap: wrap;
+        padding-right: 0px;
+        justify-content: center;
+        
+    }
 
 
-.yanmenu {
-    flex: 1;           
-    min-width: 300px;  
-    height: fit-content;     
-    padding: 30px 50px;
-    
-}
-.yanmenupng
-{
-    padding: 15% 0;
-    height: auto; 
-    margin-top: 25px;
-}
 
-.tarih{
+/* LİNKLER */
+.tarih {
     text-align: left;
 }
 
-.weblink{
+.weblink {
     text-decoration: none;
     color: lightcoral;
 }
 
-.domainlink{
+.domainlink {
     text-decoration: none;
     color: lightseagreen;
 }
 
-
-
+/* YAN MENÜ */
 .biznetitle {
     font-size: 24px;
     font-weight: bold;
@@ -203,10 +357,97 @@ nav hr{
     margin: 0;
 }
 
+/* GÖRSELLER */
+.yanmenupng {
+    padding: 1% 0;
+    height: auto; 
+    margin-top: 25px;
+}
 
-.item:hover .text-box h3 {
-    color: #007bff; 
-    transition: 0.3s;
+.rehberpng {
+    display: block;
+    width: 100%;         
+    max-width: 530px;      
+    height: auto;                                            
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.artpng {
+    display: block;
+    width: 100%;         
+    max-width: 430px;      
+    height: auto;          
+    border-radius: 10px;
+    margin-top: 0px; 
+    margin-left: 50px;
+}
+
+.artpng2 {
+    display: block;
+    width: 100%;         
+    max-width: 430px;      
+    height: auto;          
+    border-radius: 10px;   
+    margin-left: 50px;
+}
+
+.webdesignpng{
+    display: block;
+    width: 100%;         
+    max-width: 400px;      
+    height: auto;          
+    border-radius: 10px;
+    margin-top: 0;
+}
+
+.eticaretpng {
+    display: block;
+    width: 100%;         
+    max-width: 430px;      
+    height: auto;          
+    border-radius: 10px;
+}
+.eticaretpng2{
+    display: block;
+    width: 100%;         
+    max-width: 430px;                
+    border-radius: 10px;
+    height:  540px;
+}
+
+                                                
+.st1 {
+    display: block;
+    width: 400px;         
+    max-width: 550px;      
+    height: auto;          
+    border-radius: 10px;
+    margin-top: 50px;
+    
+}
+.st2 {
+    display: block;
+    width: 100%;         
+    max-width: 550px;      
+    height: auto;          
+    border-radius: 10px;
+    margin-top: 100px
+}
+.marketingpng {      
+    display: block;
+    width: 100%;         
+    max-width: 430px;      
+    height: auto;          
+    border-radius: 10px;
+}
+
+/* YAN MENU CONTAİNER */
+.yanmenu {
+    flex: 1;           
+    min-width: 300px;  
+    height: fit-content;     
+    padding: 30px 50px;
 }
 
 .yanmenubiz {
@@ -222,41 +463,7 @@ nav hr{
     order: 1; 
 }
 
-.rehberpng {
-    display: block;
-    width: 100%;         
-    max-width: 530px;      
-    height: auto;                            
-    border-radius: 10px;
-    margin-bottom:20px;
-}
-
-.yanmenuart{
-    flex: 1 1 240px;
-    display: flex;
-    flex-wrap: wrap; 
-    gap: 30px;
-    justify-content: center;
-    align-items: center; 
-    
-}
-
-.artpng{
-    display: block;
-    width: 100%;         
-    max-width: 430px;      
-    height: auto;          
-    border-radius: 10px;
-    margin-top: 80px; 
-}
-.artpng2{
-    display: block;
-    width: 100%;         
-    max-width: 430px;      
-    height: auto;          
-    border-radius: 10px;   
-}
-.yanmenuweb{
+.yanmenuart {
     flex: 1 1 240px;
     display: flex;
     flex-wrap: wrap; 
@@ -264,15 +471,17 @@ nav hr{
     justify-content: center;
     align-items: center; 
 }
-.webdesignpng{
-    display: block;
-    width: 100%;         
-    max-width: 400px;      
-    height: auto;          
-    border-radius: 10px;
-    margin-top: 0;
+
+.yanmenuweb {
+    flex: 1 1 240px;
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 30px;
+    justify-content: center;
+    align-items: center; 
 }
-.yanmenuticaret{
+
+.yanmenuticaret {
     display: flex;
     flex-direction: column; 
     flex: 1 1 300px;        
@@ -280,42 +489,15 @@ nav hr{
     justify-content: flex-start;
     align-items: center;
     margin-top: 80px;
-    
 }
-.eticaretpng{
-   display: block;
-    width: 100%;         
-    max-width: 430px;      
-    height: auto;          
-    border-radius: 10px;
-  
+
+.yanmenutavsiye {
+    flex: 1;           
+    height: fit-content;     
+    padding: 30px 50px;
 }
-.yanmenutavsiye{
-    flex: 1 1 240px;
-    display: flex;
-    flex-wrap: wrap; 
-    gap: 30px;
-    align-items: flex-start; 
-    justify-content: center;
-}
-.st1{
- display: block;
-    width: 100%;         
-    max-width: 550px;      
-    height: auto;          
-    border-radius: 10px;
-    margin-top: 20px
-}
-.st2{
- display: block;
-    width: 100%;         
-    max-width: 550px;      
-    height: auto;          
-    border-radius: 10px;
-    margin-top: 20px
-}
-.yanmenudijital{
-    
+
+.yanmenudijital {
     display: flex;
     flex-direction: column; 
     flex: 1 1 300px;        
@@ -323,10 +505,114 @@ nav hr{
     justify-content: center;
     align-items: center;
 }
-.marketingpng{      
-   display: block;
-    width: 100%;         
-    max-width: 430px;      
-    height: auto;          
-    border-radius: 10px;
+#up{
+    display:none; 
+    position:fixed;
+    bottom:20px; 
+    right:20px;
+    padding: 15px;
+    font-family: "Montserrat";
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    
 }
+/*Yukarı Buttonu*/
+html { 
+    scroll-behavior: smooth;
+ }
+
+/* CONTACT */
+.contactmain {
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start; 
+    width: 100%;
+}
+
+
+.box {
+    display: flex;
+    flex-direction: column; 
+    background: #f8f9fa;
+    border-radius: 20px;
+    padding: 40px;
+    width: 100%;
+    max-width: 1200px; 
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+.kutu {
+    display: flex;
+    flex-direction: column; 
+    background: #f8f9fa;
+    border-radius: 20px;
+    padding: 40px;
+    width: 100%;
+    max-width: 1200px; 
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.sform input, .sform textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    box-sizing: border-box; 
+    font-family: inherit;
+    resize: none;
+}
+.box:hover {
+        transform: translateY(-10px);
+        box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.15);
+    }
+
+
+.sform {
+    display: flex;
+    flex-direction: column; 
+    gap: 15px; 
+    width: 100%;
+}
+
+
+.sform button {
+    align-self: flex-start; 
+    min-width: 120px;
+    background: #111;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+ .emoji {
+        font-size: 2rem;
+        display: block;
+        
+    }
+
+
+.dark-mode .box {
+    background-color: #222;
+    color: white;
+}
+.dark-mode .kutu {
+    background-color: #222;
+    color: white;
+}
+
+.dark-mode .sform input, 
+.dark-mode .sform textarea {
+    background: #111;
+    border: 1px solid #444;
+    color: white;
+}
+/*
+Siteye Eklenicekler
+
+
+*/
